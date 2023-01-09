@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="4" failures="0" name="CheckOrderTest" time="72.843" errors="2" skipped="0">
+<testsuite tests="8" failures="0" name="CheckOrderTest" time="58.437" errors="8" skipped="0">
   <properties>
     <property name="idea.version" value="2022.1.3"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA Community Edition 2022.1.3\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="16"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.1.3 package"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2022.1.3 clean package"/>
     <property name="java.home" value="C:\Users\endi7\.jdks\corretto-16.0.2"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -60,7 +60,7 @@
     <property name="java.vendor.version" value="Corretto-16.0.2.7.1"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="CheckOrderTest" name="upperOrderTestChrome[0]" time="20.577">
+  <testcase classname="CheckOrderTest" name="upperOrderTestChrome[0]" time="12.391">
     <error message="Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
@@ -114,8 +114,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-82M7ESN&apos;, ip: &apos;10.10.0.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:61961}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 45b97ce8668ebbd957b738e7c7f9d29f
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59294}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: dc6e738228c3248017ceb4c5245786df
 *** Element info: {Using=xpath, value=.//button[text()=&apos;Посмотреть статус&apos;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
@@ -140,137 +140,83 @@ Session ID: 45b97ce8668ebbd957b738e7c7f9d29f
     <system-err>SLF4J: No SLF4J providers were found.
 SLF4J: Defaulting to no-operation (NOP) logger implementation
 SLF4J: See https://www.slf4j.org/codes.html#noProviders for further details.
-1673293471472	geckodriver	INFO	Listening on 127.0.0.1:19050
-1673293471617	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\endi7\\AppData\\Local\\Temp\\rust_mozprofiletJpvCk&quot;
-1673293471894	Marionette	INFO	Marionette enabled
-1673293471899	Marionette	INFO	Listening on port 61875
-Read port: 61875
-1673293471992	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at C:\\Users\\endi7\\AppData\\Local\\Temp\\rust_mozprofiletJpvCk\\search.json.mozlz4&quot;, (void 0)))
-���. 09, 2023 10:44:33 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 22845
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 10943
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-���. 09, 2023 10:44:40 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+���. 10, 2023 1:23:18 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1673293490261	Marionette	INFO	Stopped listening on port 61875
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-sendPing@resource://gre/modules/EventPing.jsm:51:30
-_submitPing@resource://gre/modules/EventPing.jsm:229:12
-shutdown@resource://gre/modules/EventPing.jsm:112:10
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
-shutdown/&lt;@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1232:20
-cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
-shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
-shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1232:20
-cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
-shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
-shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  TelemetryController: shutting down
-          Phase: profile-before-change-telemetry
-          State: Error getting state: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot; at addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-getShutdownState@resource://gre/modules/TelemetrySend.jsm:1687:7
-getShutdownState@resource://gre/modules/TelemetrySend.jsm:369:30
-_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
-setupTelemetry/&lt;@resource://gre/modules/TelemetryControllerParent.jsm:917:18
-safeGetState@resource://gre/modules/AsyncShutdown.jsm:242:17
-Barrier/addBlocker/promise&lt;@resource://gre/modules/AsyncShutdown.jsm:751:20
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
-removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1235:42
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 16409
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:22 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
 </system-err>
   </testcase>
-  <testcase classname="CheckOrderTest" name="upperOrderTestFirefox[0]" time="17.01"/>
-  <testcase classname="CheckOrderTest" name="lowerOrderTestChrome[0]" time="17.789">
+  <testcase classname="CheckOrderTest" name="upperOrderTestFirefox[0]" time="3.193">
+    <error message="The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at CheckOrderTest.upperOrderTestFirefox(CheckOrderTest.java:173)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 34876
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:29 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="CheckOrderTest" name="lowerOrderTestChrome[0]" time="10.429">
     <error message="Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)
 	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
@@ -324,8 +270,8 @@ For documentation on this error, please visit: https://www.seleniumhq.org/except
 Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
 System info: host: &apos;DESKTOP-82M7ESN&apos;, ip: &apos;10.10.0.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:62356}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 2a487a8a8460715c4b9bebe6fca745c4
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59361}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 4c5c6acee8f2206df293d7c05af18303
 *** Element info: {Using=xpath, value=.//button[text()=&apos;Посмотреть статус&apos;]}
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
 	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
@@ -347,134 +293,384 @@ Session ID: 2a487a8a8460715c4b9bebe6fca745c4
 	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
 	... 44 more
 </error>
-    <system-err>1673293507994	geckodriver	INFO	Listening on 127.0.0.1:36614
-1673293508003	mozrunner::runner	INFO	Running command: &quot;C:\\Program Files\\Mozilla Firefox\\firefox.exe&quot; &quot;--marionette&quot; &quot;-no-remote&quot; &quot;-profile&quot; &quot;C:\\Users\\endi7\\AppData\\Local\\Temp\\rust_mozprofileUSyHgE&quot;
-1673293508242	Marionette	INFO	Marionette enabled
-1673293508245	Marionette	INFO	Listening on port 62266
-Read port: 62266
-1673293508446	RemoteAgent	WARN	TLS certificate errors will be ignored for this session
-console.warn: SearchSettings: &quot;get: No settings file exists, new profile?&quot; (new NotFoundError(&quot;Could not open the file at C:\\Users\\endi7\\AppData\\Local\\Temp\\rust_mozprofileUSyHgE\\search.json.mozlz4&quot;, (void 0)))
-���. 09, 2023 10:45:09 PM org.openqa.selenium.remote.ProtocolHandshake createSession
-INFO: Detected dialect: W3C
-Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 48516
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 10514
 Only local connections are allowed.
 Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
 ChromeDriver was started successfully.
-���. 09, 2023 10:45:17 PM org.openqa.selenium.remote.ProtocolHandshake createSession
+���. 10, 2023 1:23:32 AM org.openqa.selenium.remote.ProtocolHandshake createSession
 INFO: Detected dialect: W3C
-1673293525058	Marionette	INFO	Stopped listening on port 62266
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-sendPing@resource://gre/modules/EventPing.jsm:51:30
-_submitPing@resource://gre/modules/EventPing.jsm:229:12
-shutdown@resource://gre/modules/EventPing.jsm:112:10
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:940:31
-shutdown/&lt;@resource://gre/modules/TelemetryControllerParent.jsm:1010:24
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:982:34
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1232:20
-cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
-shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
-shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  Waiting for ping task
-          Phase: TelemetryController: Waiting for pending ping activity
-          State: (none)
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:103:5
-promiseArchivePing@resource://gre/modules/TelemetryArchive.jsm:63:33
-_submitPingLogic@resource://gre/modules/TelemetryControllerParent.jsm:540:48
-send@resource://gre/modules/TelemetryControllerParent.jsm:628:24
-submitExternalPing@resource://gre/modules/TelemetryControllerParent.jsm:182:17
-saveShutdownPings@resource://gre/modules/TelemetrySession.jsm:1014:36
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1232:20
-cleanup@resource://gre/modules/TelemetrySession.jsm:1239:9
-shutdownChromeProcess@resource://gre/modules/TelemetrySession.jsm:1256:14
-shutdown@resource://gre/modules/TelemetrySession.jsm:247:17
-_cleanupOnShutdown@resource://gre/modules/TelemetryControllerParent.jsm:959:35
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: A blocker encountered an error while we were waiting.
-          Blocker:  TelemetryController: shutting down
-          Phase: profile-before-change-telemetry
-          State: Error getting state: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot; at addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-getShutdownState@resource://gre/modules/TelemetrySend.jsm:1687:7
-getShutdownState@resource://gre/modules/TelemetrySend.jsm:369:30
-_getState@resource://gre/modules/TelemetryControllerParent.jsm:1058:38
-setupTelemetry/&lt;@resource://gre/modules/TelemetryControllerParent.jsm:917:18
-safeGetState@resource://gre/modules/AsyncShutdown.jsm:242:17
-Barrier/addBlocker/promise&lt;@resource://gre/modules/AsyncShutdown.jsm:751:20
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-WARNING: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-WARNING: addBlocker@resource://gre/modules/AsyncShutdown.jsm:703:15
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:511:26
-addBlocker@resource://gre/modules/AsyncShutdown.jsm:450:15
-setupShutdown@resource://gre/modules/osfile/osfile_async_front.jsm:1563:28
-@resource://gre/modules/osfile/osfile_async_front.jsm:1583:16
-@resource://gre/modules/osfile.jsm:12:30
-@resource://gre/modules/TelemetryStorage.jsm:19:28
-removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:721:5
-removeAbortedSessionPing@resource://gre/modules/TelemetryControllerParent.jsm:249:17
-shutdownChromeProcess/cleanup/&lt;@resource://gre/modules/TelemetrySession.jsm:1235:42
-observe@resource://gre/modules/AsyncShutdown.jsm:560:16
-
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
-JavaScript error: resource://gre/modules/AsyncShutdown.jsm, line 703: Error: Phase &quot;profile-before-change&quot; is finished, it is too late to register completion condition &quot;OS.File: flush I/O queued before profileBeforeChange&quot;
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 33782
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:36 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
 </system-err>
   </testcase>
-  <testcase classname="CheckOrderTest" name="lowerOrderTestFirefox[0]" time="17.467"/>
+  <testcase classname="CheckOrderTest" name="lowerOrderTestFirefox[0]" time="2.476">
+    <error message="The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at CheckOrderTest.lowerOrderTestFirefox(CheckOrderTest.java:231)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 15410
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:43 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="CheckOrderTest" name="upperOrderTestChrome[1]" time="11.577">
+    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.RentPageScooter.waitForFinish(RentPageScooter.java:60)
+	at CheckOrderTest.upperOrderTestChrome(CheckOrderTest.java:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//button[text()=&apos;Посмотреть статус&apos;]&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-82M7ESN&apos;, ip: &apos;10.10.0.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59427}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 85927d63cf2a47abef33ef5bd4fc83ae
+*** Element info: {Using=xpath, value=.//button[text()=&apos;Посмотреть статус&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 44 more
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 28514
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:45 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 39546
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:49 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="CheckOrderTest" name="upperOrderTestFirefox[1]" time="2.809">
+    <error message="The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at CheckOrderTest.upperOrderTestFirefox(CheckOrderTest.java:173)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 46458
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:23:57 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="CheckOrderTest" name="lowerOrderTestChrome[1]" time="13.076">
+    <error message="Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)" type="org.openqa.selenium.TimeoutException">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of element located by By.xpath: .//button[text()=&apos;Посмотреть статус&apos;] (tried for 3 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.RentPageScooter.waitForFinish(RentPageScooter.java:60)
+	at CheckOrderTest.lowerOrderTestChrome(CheckOrderTest.java:167)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;.//button[text()=&apos;Посмотреть статус&apos;]&quot;}
+  (Session info: chrome=108.0.5359.125)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;DESKTOP-82M7ESN&apos;, ip: &apos;10.10.0.175&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 108.0.5359.125, chrome: {chromedriverVersion: 108.0.5359.71 (1e0e3868ee06..., userDataDir: C:\Users\endi7\AppData\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:59497}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: cfb94b92ab2154208b98c9bb05f4028c
+*** Element info: {Using=xpath, value=.//button[text()=&apos;Посмотреть статус&apos;]}
+	at jdk.internal.reflect.GeneratedConstructorAccessor17.newInstance(Unknown Source)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:428)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:353)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:205)
+	at org.openqa.selenium.support.ui.ExpectedConditions$7.apply(ExpectedConditions.java:201)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:249)
+	... 44 more
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 2409
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:24:00 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 30597
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:24:05 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
+  <testcase classname="CheckOrderTest" name="lowerOrderTestFirefox[1]" time="2.486">
+    <error message="The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases" type="java.lang.IllegalStateException">java.lang.IllegalStateException: The path to the driver executable must be set by the webdriver.gecko.driver system property; for more information, see https://github.com/mozilla/geckodriver. The latest version can be downloaded from https://github.com/mozilla/geckodriver/releases
+	at com.google.common.base.Preconditions.checkState(Preconditions.java:847)
+	at org.openqa.selenium.remote.service.DriverService.findExecutable(DriverService.java:134)
+	at org.openqa.selenium.firefox.GeckoDriverService.access$100(GeckoDriverService.java:44)
+	at org.openqa.selenium.firefox.GeckoDriverService$Builder.findDefaultExecutable(GeckoDriverService.java:167)
+	at org.openqa.selenium.remote.service.DriverService$Builder.build(DriverService.java:355)
+	at org.openqa.selenium.firefox.FirefoxDriver.toExecutor(FirefoxDriver.java:190)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:147)
+	at org.openqa.selenium.firefox.FirefoxDriver.&lt;init&gt;(FirefoxDriver.java:125)
+	at CheckOrderTest.lowerOrderTestFirefox(CheckOrderTest.java:231)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.internal.runners.statements.RunBefores.evaluate(RunBefores.java:26)
+	at org.junit.internal.runners.statements.RunAfters.evaluate(RunAfters.java:27)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.BlockJUnit4ClassRunner$1.evaluate(BlockJUnit4ClassRunner.java:100)
+	at org.junit.runners.ParentRunner.runLeaf(ParentRunner.java:366)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:103)
+	at org.junit.runners.BlockJUnit4ClassRunner.runChild(BlockJUnit4ClassRunner.java:63)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.junit.runners.Suite.runChild(Suite.java:128)
+	at org.junit.runners.Suite.runChild(Suite.java:27)
+	at org.junit.runners.ParentRunner$4.run(ParentRunner.java:331)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:79)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:329)
+	at org.junit.runners.ParentRunner.access$100(ParentRunner.java:66)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:293)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:413)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.execute(JUnit4Provider.java:252)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.executeTestSet(JUnit4Provider.java:141)
+	at org.apache.maven.surefire.junit4.JUnit4Provider.invoke(JUnit4Provider.java:112)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:567)
+	at org.apache.maven.surefire.util.ReflectionUtils.invokeMethodWithArray(ReflectionUtils.java:189)
+	at org.apache.maven.surefire.booter.ProviderFactory$ProviderProxy.invoke(ProviderFactory.java:165)
+	at org.apache.maven.surefire.booter.ProviderFactory.invokeProvider(ProviderFactory.java:85)
+	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:115)
+	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:75)
+</error>
+    <system-err>Starting ChromeDriver 108.0.5359.71 (1e0e3868ee06e91ad636a874420e3ca3ae3756ac-refs/branch-heads/5359@{#1016}) on port 35987
+Only local connections are allowed.
+Please see https://chromedriver.chromium.org/security-considerations for suggestions on keeping ChromeDriver safe.
+ChromeDriver was started successfully.
+���. 10, 2023 1:24:13 AM org.openqa.selenium.remote.ProtocolHandshake createSession
+INFO: Detected dialect: W3C
+</system-err>
+  </testcase>
 </testsuite>
