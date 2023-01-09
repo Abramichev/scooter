@@ -9,13 +9,11 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class MainPageScooter {
-    private WebDriver driver;
+    private final WebDriver driver;
 
     private final By upperOrderButton = By.xpath(".//div[@class='Header_Nav__AGCXC']/button[@class='Button_Button__ra12g']");
     private final By lowerOrderButton = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button[@class='Button_Button__ra12g Button_Middle__1CSJM']");
     private final By cookieButton = By.className("App_CookieButton__3cvqF");
-
-
 
     public MainPageScooter(WebDriver driver) {
         this.driver = driver;
@@ -40,44 +38,20 @@ public class MainPageScooter {
         this.driver.findElement(this.cookieButton).click();
     }
 
-    //локаторы
-    private By question1 = By.id("accordion__heading-8");
-    private By question2 = By.id("accordion__heading-9");
-    private By question3 = By.id("accordion__heading-10");
-    private By question4 = By.id("accordion__heading-11");
-    private By question5 = By.id("accordion__heading-12");
-    private By question6 = By.id("accordion__heading-13");
-    private By question7 = By.id("accordion__heading-14");
-    private By question8 = By.id("accordion__heading-15");
-
-    private By answer1 = By.id("accordion__panel-8");
-    private By answer2 = By.id("accordion__panel-9");
-    private By answer3 = By.id("accordion__panel-10");
-    private By answer4 = By.id("accordion__panel-11");
-    private By answer5 = By.id("accordion__panel-12");
-    private By answer6 = By.id("accordion__panel-13");
-    private By answer7 = By.id("accordion__panel-14");
-    private By answer8 = By.id("accordion__panel-15");
+    private By questions = By.className("accordion__item");
+    private By answers = By.className("accordion__panel");
 
     private By buttonOrderTopPage = By.xpath(".//div[@class='Header_Nav__AGCXC']/button[@class='Button_Button__ra12g']");
     private By buttonOrderMiddlePage = By.xpath(".//div[@class='Home_FinishButton__1_cWm']/button");
 
-    By[] questionList = {question1, question2, question3, question4, question5, question6, question7, question8};
-    By[] answerList = {answer1, answer2, answer3, answer4, answer5, answer6, answer7, answer8};
-
-
     public WebElement getQuestion(int index) {
-        return driver.findElement(questionList[index]);
+        return driver.findElements(questions).get(index);
     }
 
     //Получить текст ответа
     public String getTextAnswer(int index) {
-        //скролл до элемента
-        ((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView();", getQuestion(index));
-        //клик по вопросу
-        driver.findElement(questionList[index]).click();
         //вернуть текст ответа
-        return driver.findElement(answerList[index]).getText();
+        return driver.findElements(answers).get(index).getText();
     }
 
 }

@@ -12,7 +12,7 @@ import pageObjects.RentPageScooter;
 
 @RunWith(Parameterized.class)
 public class CheckOrderTest extends ConfigBrowser {
-    //private WebDriver driver;
+
     private final String name;
     private final String lastName;
     private final String address;
@@ -39,7 +39,7 @@ public class CheckOrderTest extends ConfigBrowser {
     public static Object[][] getDescriptions() {
         return new Object[][] {
                 {"Андрей", "Иванов", "Улица Московская, д. 12, кв. 1", "+79112234544", "Арбатская", "01.02.2023", 1, "black", "Просто"},
-               // {"Иван", "Петров", "пр.-т Строителей, д. 2, кв. 12", "+79053534455", "Пушкинская", "02.01.2021", 2, "grey", "ждём"}
+               {"Иван", "Петров", "пр.-т Строителей, д. 2, кв. 12", "+79053534455", "Пушкинская", "02.01.2021", 2, "grey", "ждём"}
         };
     }
 

@@ -1,0 +1,6 @@
+browserSettings\ConfigBrowser.class
+pageObjects\RentPageScooter.class
+pageObjects\Answer.class
+pageObjects\ClientPageScooter.class
+pageObjects\MainPageScooter.class
+pageObjects\OrderPage.class
