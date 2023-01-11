@@ -1,7 +1,7 @@
-import browserSettings.ConfigBrowser;
+import browser_settings.ConfigBrowser;
 import org.junit.Test;
-import pageObjects.Answer;
-import pageObjects.MainPageScooter;
+import page_objects.Answer;
+import page_objects.MainPageScooter;
 
 import static org.junit.Assert.assertEquals;
 
@@ -13,7 +13,7 @@ public class ImportentQuestionsTest extends ConfigBrowser {
 
     @Test
     public void checkAnswerText1() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -23,14 +23,11 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText2() {
-        try {
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -40,14 +37,12 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText3() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -57,14 +52,12 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText4() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -74,14 +67,11 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
-    }
+            }
 
     @Test
     public void checkAnswerText5() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -91,14 +81,12 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText6() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -108,14 +96,12 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText7() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -125,14 +111,12 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
     @Test
     public void checkAnswerText8() {
-        try {
+
             driver.get("https://qa-scooter.praktikum-services.ru/");
             // Объект класса главной страницы
             MainPageScooter objMainPage = new MainPageScooter(driver);
@@ -142,9 +126,7 @@ public class ImportentQuestionsTest extends ConfigBrowser {
             objMainPage.getQuestion(questionNumber).click();
             //Проверка текста ответа
             assertEquals("Проверьте текст " + questionNumber + " ответа", Answer.TEXT_ANSWER[questionNumber], objMainPage.getTextAnswer(questionNumber));
-        } catch (Exception e) {
-            System.out.println(e.getMessage());
-        }
+
     }
 
 }

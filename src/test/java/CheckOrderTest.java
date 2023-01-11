@@ -1,4 +1,4 @@
-import browserSettings.ConfigBrowser;
+import browser_settings.ConfigBrowser;
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -6,9 +6,9 @@ import org.junit.runners.Parameterized;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import pageObjects.ClientPageScooter;
-import pageObjects.MainPageScooter;
-import pageObjects.RentPageScooter;
+import page_objects.ClientPageScooter;
+import page_objects.MainPageScooter;
+import page_objects.RentPageScooter;
 
 @RunWith(Parameterized.class)
 public class CheckOrderTest extends ConfigBrowser {

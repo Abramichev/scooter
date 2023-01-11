@@ -1,4 +1,4 @@
-package pageObjects;
+package page_objects;
 
 public class Answer {
 
